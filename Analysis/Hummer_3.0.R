@@ -1,4 +1,4 @@
-setwd("C:/Users/felip/Documents/Proyectos_Git/Humm_radiation/")
+# setwd("C:/Users/felip/Documents/Proyectos_Git/Humm_radiation/")
 
 ############ 0. Ajuste de modelos evolutivos #####################################
 
