@@ -1,4 +1,4 @@
-setwd("C:/Users/jcriosor/OneDrive/Proyectos/Hummingbirds_RN/Analisis_2024")
+setwd("C:/Users/felip/Documents/Proyectos_Git/Humm_radiation/")
 
 ############ 0. Ajuste de modelos evolutivos #####################################
 
@@ -8,14 +8,15 @@ setwd("C:/Users/jcriosor/OneDrive/Proyectos/Hummingbirds_RN/Analisis_2024")
 ## una ves sepa con el Aic cual es el mas "ajustado" procederemos a usarlo en el calculo de PGLS
 
 # Cargar las librerías necesarias
-# Cargar las librerías necesarias
+# cambio para juan
 library(ape)
 library(geiger)
 library(dplyr)
+library(phangorn)
 
 # Cargar el archivo de datos morfológicos y el árbol filogenético
 morpho_data <- read.csv("BD_morpho/Humm_Strisores_all_AVONET.csv", header = TRUE, sep = ";", fileEncoding = "UTF-8")
-subset_trees <- read.nexus("Phylo/Subset_100_trees.nex")
+subset_trees <- read.nexus("Pyhlo/Subset_100_trees.nex")
 sum_tree_all <- maxCladeCred(subset_trees)
 
 # Renombrar la columna de especies
@@ -209,7 +210,7 @@ morpho_data <- read.csv("BD_morpho/Humm_Strisores_all_AVONET.csv",
                         header = TRUE, sep = ";", fileEncoding = "UTF-8")
 
 # Cargar el árbol filogenético (subset de 100 árboles)
-subset_trees <- read.nexus("Phylo/Subset_100_trees.nex")
+subset_trees <- read.nexus("Pyhlo/Subset_100_trees.nex")
 
 # Crear un árbol de máxima credibilidad a partir del subset de los 100 árboles
 sum_tree_all <- maxCladeCred(subset_trees)
